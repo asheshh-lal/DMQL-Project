@@ -1,0 +1,32 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div>
+    <div id="chart_div3">
+        {% block chart_content %}
+            <form action="{% url 'customize_chart' %}" method="POST"> 
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit">Show</button>
+            </form>
+
+            <!-- Bar Chart -->
+            <h3>Bar Chart: Streams & Views</h3>
+            <div>{{ bar_chart|safe }}</div>
+            
+            <!-- Pie Chart -->
+            <h3>Pie Chart: Distribution of Streams & Views by Track</h3>
+            <div>{{ pie_chart|safe }}</div>
+
+            <!-- Scatter Chart 1: Tracks Released Over Time -->
+            <h3>Scatter Chart: Tracks Released Over Time</h3>
+            <div>{{ scatter_chart_1|safe }}</div>
+
+            <!-- Scatter Chart 2: Track Comparison (Spotify, YouTube, TikTok) -->
+            <h3>Scatter Chart: Track Comparison (Spotify, YouTube, TikTok)</h3>
+            <div>{{ scatter_chart_2|safe }}</div>
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}

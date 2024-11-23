@@ -1,0 +1,34 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block content %}
+<div>
+    <div id="chart_div1">
+        {% block chart_content1 %}
+            {{ chart1|safe }}
+        {% endblock %}
+    </div>
+    <div id="chart_div5">
+        {% block chart_content5 %}
+            {{ chart5|safe }}
+        {% endblock %}
+    </div>
+    <div id="chart_div6">
+        {% block chart_content2 %}
+            {{ chart2|safe }}
+        {% endblock %}
+    </div>
+    <div id="chart_div2">
+        {% block chart_content3 %}
+            {{ chart2|safe }}
+        {% endblock %}
+    </div>
+    <div id="chart_div3">
+        {% block chart_content4 %}
+            {{ chart3|safe }}
+        {% endblock %}
+    </div>
+</div>
+
+
+{% endblock %}
