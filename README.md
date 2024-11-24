@@ -33,5 +33,5 @@ To run this project locally, follow these steps:
 #### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/project-name.git
-cd project-name
+git clone [https://github.com/your-username/project-name.git](https://github.com/asheshh-lal/DMQL-Project.git)
+cd DMQL-Project
